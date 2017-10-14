@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+<div v-bind:class="[activeClass, errorClass]" id="app1"></div>
+<script>
+    var app1 =new Vue({
+        el:'#app1',
+        data:{
+            activeClass: 'active',
+            errorClass: 'text-danger'
+        }
+    })
+</script>
+</body>
+</html>

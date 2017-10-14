@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+
+<!--<div v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }" id="app1">内联样式</div>-->
+<div v-bind:style="styleObject" id="app1">内联样式</div>
+
+<script>
+    var app1 = new Vue({
+        el:'#app1',
+//        data:{
+//            activeColor: 'red',
+//            fontSize: 30
+//        }
+        data: {
+            styleObject: {
+                color: 'red',
+                fontSize: '13px'
+            }
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+<div id="app1">
+    <li v-for="n in even(numbers)">{{ n }}</li>
+</div>
+<script>
+
+    var app1 = new Vue({
+        el:'#app1',
+        data: {
+            numbers: [ 1, 2, 3, 4, 5 ]
+        },
+        methods: {
+            even: function (numbers1) {//number1是传入的numbers[1,2,3,4,5]数组。
+                return numbers1.filter(function (number) {
+                    return number % 2 === 0
+                })
+            }
+        }
+    })
+</script>
+</body>
+</html>
